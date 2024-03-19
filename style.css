@@ -1,0 +1,376 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    justify-self: center;
+    align-items: center;
+    /* background-image: url(img/peakpx.jpg); */
+    background-color: hsl(144, 20%, 24%);
+}
+
+
+
+
+/* THE HEADER */
+.header {
+    background: #fff;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ff7200;
+    border-radius: 6px;
+    height: 70px; 
+}
+
+.header img {
+    border-radius: 5px;
+    padding-left: 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-info p {
+    margin: 0;
+    color: hsl(29, 87%, 41%);
+}
+
+
+
+
+/* THE MENU BAR */
+.m-bar {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    text-align: center;
+    border: 2px solid #ff7200;
+    border-radius: 6px;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    /* position:relative;
+    z-index: 999; */
+    /* background: hsl(0, 100%, 10%); */
+}
+
+.m-bar ul {
+    display: inline-flex;
+    list-style-type: none;
+    color: #ff7200;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.m-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+
+.m-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.active, .m-bar ul li:hover {
+    background: #ff7200;
+    border-radius: 4px;
+    /* color: #fff; */
+    transition: .4s ease;
+}
+
+
+
+
+
+
+
+
+
+
+/* THE DROPDOWNS */
+.sub-menu {
+    display: none;
+}
+
+.m-bar ul li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background: hsl(145, 20%, 24%);
+    margin-top: 15px;
+    margin-left: -15px;
+    border: 1px solid #ff7200;
+    border-radius: 6px;
+    z-index: 999;
+}
+
+.m-bar ul li:hover .sub-menu ul {
+    display: block;
+    margin: 10px;
+    z-index: 999;
+}
+
+.m-bar ul li:hover .sub-menu ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dashed #fff;
+    border-radius: 5px;
+    text-align: left;
+    z-index: 999;
+}
+
+#pic {
+    object-fit: cover;
+}
+
+
+
+
+
+
+/* THE HERO:SLIDER SECTION */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    border: 1px solid #ff7200;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    width: 1327px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* or object-fit: contain; depending on your preference */
+}
+
+.slide-content h1 {
+    margin-bottom: 10px;
+}
+
+.slide-content p {
+    margin-bottom: 20px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* THE CARDS */
+#cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 2px;
+    /* border: 1px solid hsl(29, 100%, 54%); */
+    /* border-style: dashed; */
+    
+}
+
+.card-box {
+    background-color: hsl(203, 17%, 15%);
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ff7200;
+    border-style: dashed;
+  }
+
+  .card-box:hover {
+    border: 1px solid #088178;
+    border-style: dotted;
+  }
+  
+  .card-box h3 {
+    color: #ff7200;
+    margin-top: 0;
+    text-decoration: underline;
+    z-index: 1;
+  }
+  
+  .card-box p {
+    color: #757575; /* Lightest grey with 4.5:1 contrast over white */
+    line-height: 1.5; /* Space between lines of the paragraph */
+    z-index: 1;
+  }
+  
+  .button {
+    text-decoration: none;
+    background-color: #088178;
+    padding: 0.5em 1em; 
+    border-radius: 4px;
+    z-index: 1;
+  }
+
+.button:hover {
+    background-color: #ff7200;
+    transition: .4s ease;
+}
+
+
+
+
+
+/* THE BANNER SECTION */
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-image: url(img/b2.jpg);
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4 {
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  #banner h2 {
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+  }
+  
+  #banner h2 span {
+    color: #ff3636; 
+  }
+  
+  #banner button:hover{
+    background: #ff7200;
+    color: #fff;
+    border: 2px solid white;
+    border-style: dotted;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Section */
+#footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: hsl(203, 17%, 15%);
+    color: #fff;
+    padding: 50px 0;
+    flex-direction: row;
+    height: 90px;
+}
+
+.footer-content {
+    flex: 1 1 30%; /* Adjust the width of each column */
+    margin: 0 20px;
+    /* border: 1px solid #088178; */
+}
+
+.footer-content h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    color: #ff7200;
+}
+
+.footer-content p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-content p span {
+    font-size: large;
+    font-weight: 600;
+    color: gold;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 10px;
+}
+
+.social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Copyright Section */
+.copyright {
+    text-align: center;
+    /* margin-top: 30px; */
+    padding-top: 15px;
+    border-top: 1px solid #555;
+}
+
+.copyright p {
+    font-size: 14px;
+}
+
+
+
+
